@@ -213,7 +213,9 @@ paths:
                 type: object
                 properties:
                   lon:
-                    type: string
+                    type: number
+                  lat:
+                    type: number
             multipart/form-data:
               schema:
                 type: object
