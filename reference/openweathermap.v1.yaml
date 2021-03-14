@@ -212,10 +212,40 @@ paths:
               schema:
                 type: object
                 properties:
-                  lon:
+                  coord:
+                    type: object
+                    properties:
+                      lon:
+                        type: number
+                      lat:
+                        type: number
+                  cod:
                     type: number
-                  lat:
+                  name:
+                    type: string
+                  id:
                     type: number
+                  sys:
+                    type: object
+                  clouds:
+                    type: object
+                  wind:
+                    type: object
+                  main:
+                    type: object
+                  weather:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: number
+                        main:
+                          type: string
+                        description:
+                          type: string
+                        icon:
+                          type: string
             multipart/form-data:
               schema:
                 type: object
