@@ -153,6 +153,27 @@ paths:
                   dateOfBirth: '1996-08-24'
         description: Post the necessary fields for the API to create a new user.
       description: Create a new user.
+  /weather:
+    get:
+      summary: weather
+      tags:
+        - weather endpoints
+      responses: {}
+      operationId: get-weather
+      description: Access current weather data for any location on earth
+      security:
+        - app_id: []
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: zip
+          description: '**Zip Code** Search by zip code *Example 95050'
+        - schema:
+            type: string
+          in: query
+          name: units
+          description: '*Example: imperial*. Possible values: ''Standard'' '
 components:
   schemas:
     User:
