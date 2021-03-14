@@ -174,6 +174,36 @@ paths:
           in: query
           name: units
           description: '*Example: imperial*. Possible values: ''Standard'' '
+        - schema:
+            type: string
+          in: query
+          name: q
+          description: '*Example: London*. You can call by city name...'
+        - schema:
+            type: string
+          in: query
+          name: 'id '
+          description: '**City ID**. Example: ''2172797''* You can call by...'
+        - schema:
+            type: string
+          in: query
+          name: lat
+          description: '**Latitude**. *Eample: 35*. The latitude coordinate... '
+        - schema:
+            type: string
+          in: query
+          name: lon
+          description: '**Longitude**.*Example: 139*. Longitude coordinate... '
+        - schema:
+            type: string
+          in: query
+          name: lang
+          description: '**Language**. *Example: en*. You can use the language parameter...'
+        - schema:
+            type: string
+          in: query
+          name: mode
+          description: '**Mode*. *Example: html. Determines the format of... '
 components:
   schemas:
     User:
