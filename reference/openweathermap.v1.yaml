@@ -214,25 +214,96 @@ paths:
                 properties:
                   coord:
                     type: object
+                    description: ''
                     properties:
                       lon:
                         type: number
+                        description: 'description: City geo location, longitude'
+                        example: 'example: 145.77'
                       lat:
                         type: number
+                        description: 'description: City geo location, latitude'
+                        example: 'example: -16.92'
                   cod:
                     type: number
+                    description: 'description: Internal parameter'
+                    example: 'example: 200'
                   name:
                     type: string
+                    description: 'description: Name'
+                    example: 'example: Cairns'
                   id:
                     type: number
+                    description: 'description: City ID'
+                    example: 'example: 2172797'
                   sys:
                     type: object
+                    properties:
+                      type:
+                        type: number
+                        description: 'description: Internal parameter'
+                        example: 'example: 1'
+                      id:
+                        type: number
+                        description: 'description: Internal parameter'
+                        example: 'example: 8166'
+                      country:
+                        type: string
+                        description: 'description: ‘Country code (GB, JP etc.)’'
+                        example: 'example: AU'
+                      sunrise:
+                        type: number
+                        description: 'description: ‘Sunrise time, unix, UTC’'
+                        example: 'example: 1435610796'
+                      sunset:
+                        type: number
+                        description: 'description: ‘Sunset time, unix, UTC’'
+                        example: 'example: 1435650870'
                   clouds:
                     type: object
+                    properties:
+                      all:
+                        type: number
+                        description: 'description: ‘Cloudiness, %’'
+                        example: 'example: 75'
                   wind:
                     type: object
+                    properties:
+                      speed:
+                        type: number
+                        description: 'description: ‘Wind speed. Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour.’'
+                        example: 'example: 5.1'
+                      deg:
+                        type: number
+                        description: 'description: ‘Wind direction, degrees (meteorological)’'
+                        example: 'example: 150'
                   main:
                     type: object
+                    properties:
+                      temp:
+                        type: number
+                        description: 'description: ‘Temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.’'
+                        example: 'example: 293.25'
+                      feels_like:
+                        type: number
+                        description: 'description: What the weather feels like despite the actual numbers'
+                        example: 'example: 41.16'
+                      temp_min:
+                        type: number
+                        description: 'description: ‘Minimum temperature at the moment. This is deviation from current temp that is possible for large cities and megalopolises geographically expanded (use these parameter optionally). Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.’'
+                        example: 'example: 289.82'
+                      temp_max:
+                        type: number
+                        description: 'description: ‘Maximum temperature at the moment. This is deviation from current temp that is possible for large cities and megalopolises geographically expanded (use these parameter optionally). Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.’'
+                        example: 'example: 295.37'
+                      pressure:
+                        type: number
+                        description: 'description: ‘Atmospheric pressure (on the sea level, if there is no sea_level or grnd_level data), hPa’'
+                        example: 'example: 1019'
+                      humidity:
+                        type: number
+                        description: 'description: ‘Humidity, %’'
+                        example: 'example: 83'
                   weather:
                     type: array
                     items:
@@ -240,12 +311,32 @@ paths:
                       properties:
                         id:
                           type: number
+                          description: 'description: Weather condition id'
+                          example: 'example: ‘803’'
                         main:
                           type: string
+                          description: 'description: ‘Group of weather parameters (Rain, Snow, Extreme etc.)’'
+                          example: 'example: clouds'
                         description:
                           type: string
+                          description: 'description: Weather condition within the group'
+                          example: 'example: broken clouds'
                         icon:
                           type: string
+                          description: 'description: Weather icon id'
+                          example: 'example: 04n'
+                  dt:
+                    type: number
+                    description: 'description: ‘Time of data calculation, unix, UTC’'
+                    example: 'example: 1435658272'
+                  visibility:
+                    type: number
+                    description: 'description: ‘Visibility, meter’'
+                    example: 'example: 16093'
+                  base:
+                    type: string
+                    description: 'description: Internal parameter'
+                    example: 'example: cmc stations'
             multipart/form-data:
               schema:
                 type: object
