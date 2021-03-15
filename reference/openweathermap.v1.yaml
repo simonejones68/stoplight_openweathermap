@@ -337,10 +337,6 @@ paths:
                     type: string
                     description: 'description: Internal parameter'
                     example: 'example: cmc stations'
-                  Zip:
-                    type: string
-                    description: Enter a valid zip
-                    example: '950950'
             multipart/form-data:
               schema:
                 type: object
