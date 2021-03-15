@@ -421,6 +421,16 @@ paths:
                           type: string
                         icon:
                           type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/unauthorised_response'
+            application/xml:
+              schema:
+                type: object
+                properties: {}
 components:
   schemas:
     User:
@@ -464,6 +474,17 @@ components:
         - lastName
         - email
         - emailVerified
+    unauthorised_response:
+      title: unauthorised_response
+      type: object
+      properties:
+        cod:
+          type: integer
+        message:
+          type: string
+      required:
+        - cod
+        - message
   securitySchemes:
     app_id:
       name: appid
